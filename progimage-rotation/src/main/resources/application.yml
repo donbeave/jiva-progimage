@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: progimage-rotation
+  server:
+    port: 10003
+    multipart:
+      max-file-size: 10MB
+endpoints:
+  info:
+    enabled: true
+    sensitive: false
+  health:
+    enabled: true
+    sensitive: false
+    details-visible: anonymous

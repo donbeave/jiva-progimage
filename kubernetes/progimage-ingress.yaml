@@ -1,0 +1,45 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: progimage-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /storage
+            pathType: Prefix
+            backend:
+              service:
+                name: progimage-storage
+                port:
+                  number: 80
+          - path: /compression
+            pathType: Prefix
+            backend:
+              service:
+                name: progimage-compression
+                port:
+                  number: 80
+          - path: /rotation
+            pathType: Prefix
+            backend:
+              service:
+                name: progimage-rotation
+                port:
+                  number: 80
+          - path: /filters
+            pathType: Prefix
+            backend:
+              service:
+                name: progimage-filters
+                port:
+                  number: 80
+          - path: /thumbnail
+            pathType: Prefix
+            backend:
+              service:
+                name: progimage-thumbnail
+                port:
+                  number: 80
