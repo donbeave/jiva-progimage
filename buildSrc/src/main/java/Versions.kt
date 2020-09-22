@@ -6,7 +6,7 @@ object Versions {
     const val gradleTestLoggerPlugin = "2.1.0"
 
     // https://plugins.gradle.org/plugin/io.micronaut.application
-    const val gradleMicronautPlugin = "1.0.0.RC11"
+    const val gradleMicronautPlugin = "1.0.0.RC12"
 
     // Libraries
 
